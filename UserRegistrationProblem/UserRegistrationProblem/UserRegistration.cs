@@ -26,6 +26,23 @@ namespace UserRegistrationProblem
             {
                 Console.WriteLine(e.Message);
             }
-        }  
+        }
+        //For last NAme
+        public void validateLastName(string lastName)
+        {
+            try
+            {
+
+                string stringForLastName = "^[A-Z][a-z]{3,}?";
+                if (Regex.IsMatch(lastName, stringForLastName))
+                    Console.WriteLine(lastName + " is Valid");
+                else
+                    Console.WriteLine(lastName + " is Invalid");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
     }
 }
