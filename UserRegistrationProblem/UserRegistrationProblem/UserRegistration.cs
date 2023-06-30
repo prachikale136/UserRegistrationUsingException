@@ -126,5 +126,22 @@ namespace UserRegistrationProblem
                 Console.WriteLine(e.Message);
             }
         }
+
+        ////For Special  Password
+        public void validateSpecialcarPassword(string specialCarPassword)
+        {
+            string stringForNumericPassword = "^([a-zA-Z0-9])*[!@#$%^&*]{1}([a-zA-Z0-9])*$";
+            try
+            {
+                if (Regex.IsMatch(specialCarPassword, stringForNumericPassword))
+                    Console.WriteLine(specialCarPassword + " is Valid");
+                else
+                    Console.WriteLine(specialCarPassword + " is Invalid");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
     }
 }
