@@ -18,6 +18,7 @@ namespace UserRegistrationProblem
             validateUser.validateMobileNumber("9563214627");
             validateUser.validatePassword("prachii012");
             validateUser.validateUperCasePassword("PRachi785");
+            validateUser.validateNumericPassword("2126555");
             Console.ReadKey();
         }
     }
