@@ -78,5 +78,21 @@ namespace UserRegistrationProblem
                 Console.WriteLine(e.Message);
             }
         }
+        //For Password
+        public void validatePassword(string password)
+        {
+            string stringForPassword = "^.{8,}?";
+            try
+            {
+                if (Regex.IsMatch(password, stringForPassword))
+                    Console.WriteLine(password + " is Valid");
+                else
+                    Console.WriteLine(password + " is Invalid");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
     }
 }
